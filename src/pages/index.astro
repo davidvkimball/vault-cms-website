@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Github, BookOpen } from "lucide-react";
+import { Steps } from "../components/steps";
+import { Image } from "astro:assets";
+import logoLight from "../assets/vault-cms-logo-horizontal.png";
+import logoDark from "../assets/vault-cms-logo-horizontal-on-dark.png";
+---
+
+<Layout>
+  <div class="min-h-screen bg-background selection:bg-primary/20 selection:text-primary flex flex-col">
+    <div class="max-w-2xl mx-auto px-6 sm:px-8 w-full flex-1">
+      {/* Header */}
+      <header class="flex items-center justify-between py-6">
+        <a href="/" class="block">
+          <Image
+            src={logoDark}
+            alt="Vault CMS"
+            width={160}
+            height={40}
+            class="h-8 w-auto hidden dark:block"
+            loading="eager"
+          />
+          <Image
+            src={logoLight}
+            alt="Vault CMS"
+            width={160}
+            height={40}
+            class="h-8 w-auto block dark:hidden"
+            loading="eager"
+          />
+        </a>
+        <nav class="flex items-center gap-5">
+          <a
+            href="https://docs.vaultcms.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
+          >
+            <BookOpen className="w-4 h-4" />
+            <span class="hidden sm:inline">Docs</span>
+          </a>
+          <a
+            href="https://github.com/davidvkimball/vault-cms"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
+          >
+            <Github className="w-4 h-4" />
+            <span class="hidden sm:inline">GitHub</span>
+          </a>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <section class="pt-8 sm:pt-12 pb-10 sm:pb-14">
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] tracking-tight text-foreground text-balance">
+          Use <span class="text-primary">Obsidian</span> as a CMS
+          <br class="hidden sm:block" /> for your{" "}
+          <span class="text-secondary-foreground">Astro</span> site.
+        </h1>
+      </section>
+
+      {/* Steps */}
+      <section class="pb-10 sm:pb-14">
+        <Steps client:load />
+      </section>
+    </div>
+
+    {/* Footer */}
+    <footer class="py-6 text-center text-sm text-muted-foreground">
+      &copy; 2026{" "}
+      <a
+        href="https://davidvkimball.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-foreground transition-colors"
+      >
+        David V. Kimball
+      </a>
+    </footer>
+  </div>
+</Layout>

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('/fonts/consolas.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 260 20% 97%;
+    --foreground: 260 15% 12%;
+    --card: 260 15% 94%;
+    --card-foreground: 260 15% 12%;
+    --popover: 260 15% 94%;
+    --popover-foreground: 260 15% 12%;
+    --primary: 310 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 55% 50%;
+    --secondary-foreground: 270 45% 35%;
+    --muted: 260 10% 90%;
+    --muted-foreground: 260 6% 45%;
+    --accent: 310 20% 92%;
+    --accent-foreground: 310 50% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 10% 88%;
+    --input: 260 10% 88%;
+    --ring: 310 80% 55%;
+    --radius: 0.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 260 12% 6%;
+      --foreground: 240 5% 90%;
+      --card: 260 10% 9%;
+      --card-foreground: 240 5% 90%;
+      --popover: 260 10% 9%;
+      --popover-foreground: 240 5% 90%;
+      --primary: 310 80% 65%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 270 55% 55%;
+      --secondary-foreground: 270 20% 85%;
+      --muted: 260 8% 13%;
+      --muted-foreground: 260 5% 50%;
+      --accent: 310 30% 15%;
+      --accent-foreground: 310 60% 75%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 260 6% 14%;
+      --input: 260 6% 14%;
+      --ring: 310 80% 65%;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
