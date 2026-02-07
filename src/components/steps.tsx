@@ -15,13 +15,14 @@ export function Steps() {
         onMouseLeave={() => setHovered(null)}
       >
         {/* Connecting line */}
-        <div className="absolute left-[15px] top-[32px] bottom-0 w-px">
+        <div className="absolute left-[15px] top-[34px] bottom-[-2px] w-[2px]">
           <div className="absolute inset-0 bg-border" />
           <div
-            className="absolute inset-0 transition-opacity duration-500"
+            className="absolute inset-0 transition-all duration-500"
             style={{
               opacity: hovered !== null && hovered >= 2 ? 1 : 0,
               background: "linear-gradient(to bottom, hsl(var(--primary)), hsl(var(--secondary)))",
+              boxShadow: hovered !== null && hovered >= 2 ? "0 0 8px hsl(var(--primary) / 0.5)" : "none",
             }}
           />
         </div>
@@ -33,7 +34,7 @@ export function Steps() {
               ? "hsl(var(--primary) / 0.15)"
               : "hsl(var(--muted))",
             boxShadow: hovered !== null && hovered >= 1
-              ? "0 0 12px hsl(var(--primary) / 0.3), inset 0 0 0 1px hsl(var(--primary) / 0.25)"
+              ? "0 0 8px hsl(var(--primary) / 0.15), inset 0 0 0 1px hsl(var(--primary) / 0.1)"
               : "none",
           }}
         >
@@ -61,13 +62,14 @@ export function Steps() {
         onMouseLeave={() => setHovered(null)}
       >
         {/* Connecting line */}
-        <div className="absolute left-[15px] top-[32px] bottom-0 w-px">
+        <div className="absolute left-[15px] top-[34px] bottom-[-2px] w-[2px]">
           <div className="absolute inset-0 bg-border" />
           <div
-            className="absolute inset-0 transition-opacity duration-500"
+            className="absolute inset-0 transition-all duration-500"
             style={{
               opacity: hovered !== null && hovered >= 3 ? 1 : 0,
               background: "linear-gradient(to bottom, hsl(var(--secondary)), hsl(var(--primary)))",
+              boxShadow: hovered !== null && hovered >= 3 ? "0 0 8px hsl(var(--secondary) / 0.5)" : "none",
             }}
           />
         </div>
@@ -79,7 +81,7 @@ export function Steps() {
               ? "hsl(var(--secondary) / 0.15)"
               : "hsl(var(--muted))",
             boxShadow: hovered !== null && hovered >= 2
-              ? "0 0 12px hsl(var(--secondary) / 0.3), inset 0 0 0 1px hsl(var(--secondary) / 0.25)"
+              ? "0 0 8px hsl(var(--secondary) / 0.15), inset 0 0 0 1px hsl(var(--secondary) / 0.1)"
               : "none",
           }}
         >
@@ -121,7 +123,7 @@ export function Steps() {
               ? "hsl(var(--primary) / 0.15)"
               : "hsl(var(--muted))",
             boxShadow: hovered !== null && hovered >= 3
-              ? "0 0 12px hsl(var(--primary) / 0.3), inset 0 0 0 1px hsl(var(--primary) / 0.25)"
+              ? "0 0 8px hsl(var(--primary) / 0.15), inset 0 0 0 1px hsl(var(--primary) / 0.1)"
               : "none",
           }}
         >
