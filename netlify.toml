@@ -6,6 +6,12 @@
   package = "@netlify/plugin-lighthouse"
 
 [[redirects]]
+  from = "https://vault-cms.netlify.app/*"
+  to = "https://vaultcms.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/docs"
   to = "https://docs.vaultcms.org"
   status = 301
