@@ -4,3 +4,13 @@
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
+
+[[redirects]]
+  from = "/docs"
+  to = "https://docs.vaultcms.org"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
