@@ -15,8 +15,15 @@
   from = "/docs"
   to = "https://docs.vaultcms.org"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/docs/*"
+  to = "https://docs.vaultcms.org/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
   to = "/"
-  status = 301
+  status = 302
