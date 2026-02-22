@@ -25,5 +25,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/"
-  status = 302
+  to = "/index.html"
+  status = 404
