@@ -22,3 +22,9 @@
   to = "https://docs.vaultcms.org/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/latest"
+  to = "/api/download-latest"
+  status = 302
+  force = true
