@@ -4,13 +4,14 @@ import { useState } from "react"
 import { Check, Copy } from "lucide-react"
 
 const managers = [
+  { id: "npx", label: "npx", cmd: "npx create-vaultcms" },
   { id: "npm", label: "npm", cmd: "npm create vaultcms" },
   { id: "pnpm", label: "pnpm", cmd: "pnpm create vaultcms" },
   { id: "yarn", label: "yarn", cmd: "yarn create vaultcms" },
 ] as const
 
 export function InstallTabs() {
-  const [active, setActive] = useState<string>("pnpm")
+  const [active, setActive] = useState<string>("npx")
   const [copied, setCopied] = useState(false)
 
   const current = managers.find((m) => m.id === active)!
