@@ -28,8 +28,7 @@ export function VersionDisplay() {
       <a
         href={release.html_url}
         target="_blank"
-        rel="noopener noreferrer"
-        className="font-mono text-accent-foreground hover:text-foreground"
+          className="font-mono text-accent-foreground hover:text-foreground"
       >
         {release.tag_name}
       </a>
@@ -54,7 +53,6 @@ export function DownloadButton() {
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
       className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-heading font-medium transition-all shadow-md hover:shadow-primary/20 active:scale-95 group"
     >
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -93,8 +93,7 @@ export function ThemeCarousel() {
                 <a
                   href={theme.url}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="card-external-link"
+                                    className="card-external-link"
                   title={`Visit ${theme.name}`}
                   aria-label={`Visit ${theme.name}`}
                   onClick={(e) => e.stopPropagation()}
@@ -129,8 +128,7 @@ export function ThemeCarousel() {
                 <a
                   href={themes[zoomed].url}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="lightbox-external-link"
+                                    className="lightbox-external-link"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <ExternalIcon />
